@@ -4,22 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROTC At Mines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .left-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .right-content {
+            flex-basis: 40%; /* Adjust the width of the right side */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-content img {
+            width: 100%;
+            height: 300px; /* Adjust the height of the image */
+            object-fit: cover; /* Make sure the image doesn't get distorted */
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        h5 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-    <iframe 
-        src="https://docs.google.com/document/d/1C0Y-SQgaB1PdWQ4hPLjp9O_kWPvxQ0yW9dqg8N1PGKA/preview" 
-        width="100%" 
-        height="600px">
-    </iframe>
+    <div class="container">
+        <!-- Left content area -->
+        <div class="left-content">
+            <h2>ROTC At Mines</h2>
+            <p>Some introduction or text content here...</p>
+            <!-- Add more text or content here if needed -->
+        </div>
 
-    <a href="https://drive.google.com/drive/folders/1rZosd2RWW6az2wAoYTMQIktNIfBioal9"> 
-        Pictures! 
-    </a>
-
-    <img src="DSC00474.JPG" width="600" height="400" alt="ROTC Event">
-
-    <h5>Credits: CDT Abuan</h5>
+        <!-- Right content area -->
+        <div class="right-content">
+            <!-- Image at the top right, taking up half the height -->
+            <img src="DSC00474.JPG" alt="ROTC Event">
+            
+            <!-- Google doc iframe occupying full right side -->
+            <iframe 
+                src="https://docs.google.com/document/d/1C0Y-SQgaB1PdWQ4hPLjp9O_kWPvxQ0yW9dqg8N1PGKA/preview">
+            </iframe>
+            
+            <h5>Credits: CDT Abuan</h5>
+        </div>
+    </div>
 
 </body>
 </html>
