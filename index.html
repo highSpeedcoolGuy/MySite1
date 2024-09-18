@@ -23,6 +23,27 @@
             padding-right: 20px;
         }
 
+        .left-content h5 {
+            margin-top: 0;
+        }
+
+        .left-content a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between images */
+        }
+
+        .image-gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+
         .right-content {
             flex-basis: 40%; /* Adjust the width of the right side */
             display: flex;
@@ -56,22 +77,22 @@
         <div class="left-content">
             <h2>ROTC At Mines</h2>
             <p>Bravo Company</p>
-            
-            <h5><a href= "https://www.linkedin.com/in/jose-abuan-1342851b8/">Credits: CDT Abuan</a></h5>
-            <a href ="https://forms.gle/JXyBHUWzjDMtZfuo7"> Functionalities Survey </a>
-            <img src="DSC00474.JPG" alt="ROTC Event">
-            <img src="IMG_6672.jpeg" alt="ROTC Event">
-            <img src="IMG_6538.JPG" alt="ROTC Event">
-            <img src="IMG_6010.JPG" alt="ROTC Event">
-            <img src="Ranger Buddy.jpeg" alt="ROTC Event">
-            <!-- Add more text or content here if needed -->
+
+            <h5><a href="https://www.linkedin.com/in/jose-abuan-1342851b8/">Credits: CDT Abuan</a></h5>
+            <a href="https://forms.gle/JXyBHUWzjDMtZfuo7">Functionalities Survey</a>
+
+            <!-- Image gallery -->
+            <div class="image-gallery">
+                <img src="DSC00474.JPG" alt="ROTC Event">
+                <img src="IMG_6672.jpeg" alt="ROTC Event">
+                <img src="IMG_6538.JPG" alt="ROTC Event">
+                <img src="IMG_6010.JPG" alt="ROTC Event">
+                <img src="Ranger Buddy.jpeg" alt="ROTC Event">
+            </div>
         </div>
 
         <!-- Right content area -->
         <div class="right-content">
-            <!-- Credits above the image -->
-            
-            
             <!-- Image at the top right -->
             <img src="DSC00474.JPG" alt="ROTC Event">
             
