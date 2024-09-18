@@ -34,13 +34,13 @@
 
         .image-gallery {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* Space between images */
+            flex-direction: column; /* Display images in a single column */
+            gap: 15px; /* Space between images */
         }
 
         .image-gallery img {
-            width: 150px;
-            height: 100px;
+            width: 350px; /* Make the images larger */
+            height: 250px;
             object-fit: cover;
         }
 
@@ -81,8 +81,9 @@
             <h5><a href="https://www.linkedin.com/in/jose-abuan-1342851b8/">Credits: CDT Abuan</a></h5>
             <a href="https://forms.gle/JXyBHUWzjDMtZfuo7">Functionalities Survey</a>
 
-            <!-- Image gallery -->
+            <!-- Image gallery in a column -->
             <div class="image-gallery">
+                <img src="DSC00474.JPG" alt="ROTC Event">
                 <img src="IMG_6672.jpeg" alt="ROTC Event">
                 <img src="IMG_6538.JPG" alt="ROTC Event">
                 <img src="IMG_6010.JPG" alt="ROTC Event">
