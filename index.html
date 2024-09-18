@@ -27,12 +27,13 @@
             flex-basis: 40%; /* Adjust the width of the right side */
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .right-content img {
-            width: 100%;
-            height: 300px; /* Adjust the height of the image */
-            object-fit: cover; /* Make sure the image doesn't get distorted */
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
         }
 
         iframe {
@@ -43,6 +44,8 @@
 
         h5 {
             text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
         }
     </style>
 </head>
@@ -52,21 +55,25 @@
         <!-- Left content area -->
         <div class="left-content">
             <h2>ROTC At Mines</h2>
-            <p>Some introduction or text content here...</p>
+            <p>Bravo Company</p>
+            
+            <h5>Credits: CDT Abuan</h5>
+            
             <!-- Add more text or content here if needed -->
         </div>
 
         <!-- Right content area -->
         <div class="right-content">
-            <!-- Image at the top right, taking up half the height -->
+            <!-- Credits above the image -->
+            
+            
+            <!-- Image at the top right -->
             <img src="DSC00474.JPG" alt="ROTC Event">
             
             <!-- Google doc iframe occupying full right side -->
             <iframe 
-                src="https://docs.google.com/document/d/1C0Y-SQgaB1PdWQ4hPLjp9O_kWPvxQ0yW9dqg8N1PGKA/preview">
+                src="https://docs.google.com/document/d/1oEi5_Mw0zhN58RGEETtbXQaLKGmrOAHN-XdxnhohH1I/preview">
             </iframe>
-            
-            <h5>Credits: CDT Abuan</h5>
         </div>
     </div>
 
