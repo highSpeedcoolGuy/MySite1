@@ -3,6 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        /* Hide the protected content initially */
+        #protectedContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Password Protected Area</h2>
+    
+    <!-- Input box for password -->
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+    
+    <!-- Protected content -->
+    <div id="protectedContent">
+        <h3>Secret Content</h3>
+        <p>This is the protected content that only authorized users should see.</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            // Define the correct password (hard-coded here for simplicity)
+            const correctPassword = "whitecanofmonster";
+            
+            // Get the entered password from the input field
+            const enteredPassword = document.getElementById("passwordInput").value;
+            
+            // Check if the entered password matches the correct one
+            if (enteredPassword === correctPassword) {
+                // If correct, show the protected content
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                // If incorrect, show an alert message
+                alert("Incorrect password!");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROTC At Mines</title>
     <style>
         body {
