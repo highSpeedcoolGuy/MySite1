@@ -3,54 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
-    <style>
-        /* Hide the protected content initially */
-        #protectedContent {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <h2>Password Protected Area</h2>
-    
-    <!-- Input box for password -->
-    <input type="password" id="passwordInput" placeholder="Enter password">
-    <button onclick="checkPassword()">Submit</button>
-    
-    <!-- Protected content -->
-    <div id="protectedContent">
-        <h3>Secret Content</h3>
-        <p>This is the protected content that only authorized users should see.</p>
-    </div>
-
-    <script>
-        function checkPassword() {
-            // Define the correct password (hard-coded here for simplicity)
-            const correctPassword = "whitecanofmonster";
-            
-            // Get the entered password from the input field
-            const enteredPassword = document.getElementById("passwordInput").value;
-            
-            // Check if the entered password matches the correct one
-            if (enteredPassword === correctPassword) {
-                // If correct, show the protected content
-                document.getElementById("protectedContent").style.display = "block";
-            } else {
-                // If incorrect, show an alert message
-                alert("Incorrect password!");
-            }
-        }
-    </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROTC At Mines</title>
     <style>
         body {
@@ -116,39 +68,82 @@
             margin: 0;
             padding-bottom: 10px;
         }
+
+        /* Hide the protected content initially */
+        #protectedContent {
+            display: none;
+        }
+
+        /* Center the password input */
+        #passwordSection {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Left content area -->
-        <div class="left-content">
-            <h2>ROTC At Mines</h2>
-            <p>Bravo Company</p>
+    <!-- Password input section -->
+    <div id="passwordSection">
+        <h2>Enter Password to View ROTC Content</h2>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
 
-            <h5><a href="https://www.linkedin.com/in/jose-abuan-1342851b8/">Credits: CDT Abuan</a></h5>
-            <a href="https://forms.gle/JXyBHUWzjDMtZfuo7">Functionalities Survey</a>
+    <!-- Protected content section -->
+    <div id="protectedContent">
+        <div class="container">
+            <!-- Left content area -->
+            <div class="left-content">
+                <h2>ROTC At Mines</h2>
+                <p>Bravo Company</p>
 
-            <!-- Image gallery in a column -->
-            <div class="image-gallery">
-                <img src="IMG_6672.jpeg" alt="ROTC Event">
-                <img src="IMG_6538.JPG" alt="ROTC Event">
-                <img src="IMG_6010.JPG" alt="ROTC Event">
-                <img src="Ranger Buddy.jpeg" alt="ROTC Event">
+                <h5><a href="https://www.linkedin.com/in/jose-abuan-1342851b8/">Credits: CDT Abuan</a></h5>
+                <a href="https://forms.gle/JXyBHUWzjDMtZfuo7">Functionalities Survey</a>
+
+                <!-- Image gallery in a column -->
+                <div class="image-gallery">
+                    <img src="IMG_6672.jpeg" alt="ROTC Event">
+                    <img src="IMG_6538.JPG" alt="ROTC Event">
+                    <img src="IMG_6010.JPG" alt="ROTC Event">
+                    <img src="Ranger Buddy.jpeg" alt="ROTC Event">
+                </div>
+            </div>
+
+            <!-- Right content area -->
+            <div class="right-content">
+                <!-- Image at the top right -->
+                <img src="DSC00474.JPG" alt="ROTC Event">
+                
+                <!-- Google doc iframe occupying full right side -->
+                <iframe 
+                    src="https://docs.google.com/document/d/1ZhTWU3MybsraknMZ7xeSmZSD2SOoS1A0h1ip14CeZrc/preview">
+                </iframe>
             </div>
         </div>
-
-        <!-- Right content area -->
-        <div class="right-content">
-            <!-- Image at the top right -->
-            <img src="DSC00474.JPG" alt="ROTC Event">
-            
-            <!-- Google doc iframe occupying full right side -->
-            <iframe 
-                src="https://docs.google.com/document/d/1ZhTWU3MybsraknMZ7xeSmZSD2SOoS1A0h1ip14CeZrc/preview">
-            </iframe>
-        </div>
     </div>
+
+    <script>
+        function checkPassword() {
+            // Define the correct password
+            const correctPassword = "yourPassword"; // Change this to your actual password
+            
+            // Get the entered password from the input field
+            const enteredPassword = document.getElementById("passwordInput").value;
+            
+            // Check if the entered password matches the correct one
+            if (enteredPassword === correctPassword) {
+                // Hide the password section
+                document.getElementById("passwordSection").style.display = "none";
+                
+                // Show the protected content
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                // If incorrect, show an alert message
+                alert("Incorrect password!");
+            }
+        }
+    </script>
 
 </body>
 </html>
